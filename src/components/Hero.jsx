@@ -2,7 +2,6 @@ import React, { useState } from 'react';
 import { 
   ShieldCheck, 
   Mail, 
-  Phone, 
   Copy, 
   Check, 
   ArrowUpRight, 
@@ -15,18 +14,11 @@ import { resumeData } from '../data/resumeData';
 
 export default function Hero({ onPrintClick }) {
   const [copiedEmail, setCopiedEmail] = useState(false);
-  const [copiedPhone, setCopiedPhone] = useState(false);
 
   const handleCopyEmail = () => {
     navigator.clipboard.writeText(resumeData.personalInfo.email);
     setCopiedEmail(true);
     setTimeout(() => setCopiedEmail(false), 2000);
-  };
-
-  const handleCopyPhone = () => {
-    navigator.clipboard.writeText(resumeData.personalInfo.phone);
-    setCopiedPhone(true);
-    setTimeout(() => setCopiedPhone(false), 2000);
   };
 
   return (
@@ -89,24 +81,6 @@ export default function Hero({ onPrintClick }) {
                   title="Copy email to clipboard"
                 >
                   {copiedEmail ? <Check className="w-4 h-4 text-emerald-300" /> : <Copy className="w-4 h-4" />}
-                </button>
-              </div>
-
-              {/* Phone Button */}
-              <div className="inline-flex rounded-lg shadow-sm">
-                <a
-                  href={`tel:${resumeData.personalInfo.phone.replace(/[^0-9]/g, '')}`}
-                  className="inline-flex items-center gap-2 px-3.5 py-2.5 rounded-l-lg bg-slate-800 hover:bg-slate-700 text-slate-200 border border-r-0 border-slate-700 text-sm font-medium transition-all"
-                >
-                  <Phone className="w-4 h-4 text-brand-400" />
-                  <span>{resumeData.personalInfo.phone}</span>
-                </a>
-                <button
-                  onClick={handleCopyPhone}
-                  className="inline-flex items-center px-2.5 py-2.5 rounded-r-lg bg-slate-800 hover:bg-slate-700 text-slate-300 border border-slate-700 text-sm transition-all"
-                  title="Copy phone to clipboard"
-                >
-                  {copiedPhone ? <Check className="w-4 h-4 text-emerald-300" /> : <Copy className="w-4 h-4" />}
                 </button>
               </div>
 

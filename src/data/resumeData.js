@@ -5,7 +5,6 @@ export const resumeData = {
     clearance: "TS/SCI Clearance",
     clearanceBadge: "Active TS/SCI Security Clearance",
     email: "brandennguyenmd@gmail.com",
-    phone: "(240)-755-1392",
     location: "Washington DC / Baltimore Area (MD, VA)",
     linkedin: "https://www.linkedin.com/in/branden-nguyen/", // Editable placeholder/link
     github: "https://github.com/BrandenWin",

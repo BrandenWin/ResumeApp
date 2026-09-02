@@ -1,5 +1,5 @@
 import React from 'react';
-import { Mail, Phone, ShieldCheck, ArrowUp, FileText } from 'lucide-react';
+import { Mail, ShieldCheck, ArrowUp, FileText } from 'lucide-react';
 import { LinkedInIcon, GitHubIcon } from './Icons';
 import { resumeData } from '../data/resumeData';
 
@@ -60,13 +60,6 @@ export default function ContactFooter({ onPrintClick }) {
               title="Email"
             >
               <Mail className="w-4 h-4" />
-            </a>
-            <a
-              href={`tel:${resumeData.personalInfo.phone.replace(/[^0-9]/g, '')}`}
-              className="hover:text-white transition-colors"
-              title="Phone"
-            >
-              <Phone className="w-4 h-4" />
             </a>
             <a
               href={resumeData.personalInfo.linkedin}

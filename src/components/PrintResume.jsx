@@ -51,8 +51,6 @@ export default function PrintResume({ isOpen, onClose }) {
                 {resumeData.personalInfo.email}
               </a>
               <span>|</span>
-              <span>{resumeData.personalInfo.phone}</span>
-              <span>|</span>
               <a href={resumeData.personalInfo.linkedin} className="text-blue-700 underline">
                 LinkedIn
               </a>
