@@ -7,32 +7,34 @@ import Education from './components/Education';
 import Affiliations from './components/Affiliations';
 import ContactFooter from './components/ContactFooter';
 import PrintResume from './components/PrintResume';
+import ResumeDocument from './components/ResumeDocument';
 
 export default function App() {
   const [printModalOpen, setPrintModalOpen] = useState(false);
 
   return (
-    <div className="min-h-screen bg-slate-900 text-slate-100 selection:bg-brand-500 selection:text-white font-sans antialiased">
-      {/* Top Navbar */}
-      <Navbar onPrintClick={() => setPrintModalOpen(true)} />
+    <>
+      {/* On-screen Web Application View */}
+      <div className="screen-only-view min-h-screen bg-slate-900 text-slate-100 selection:bg-brand-500 selection:text-white font-sans antialiased">
+        <Navbar onPrintClick={() => setPrintModalOpen(true)} />
+        <main>
+          <Hero onPrintClick={() => setPrintModalOpen(true)} />
+          <Experience />
+          <Skills />
+          <Education />
+          <Affiliations />
+        </main>
+        <ContactFooter onPrintClick={() => setPrintModalOpen(true)} />
+        <PrintResume 
+          isOpen={printModalOpen} 
+          onClose={() => setPrintModalOpen(false)} 
+        />
+      </div>
 
-      {/* Main Content Sections */}
-      <main>
-        <Hero onPrintClick={() => setPrintModalOpen(true)} />
-        <Experience />
-        <Skills />
-        <Education />
-        <Affiliations />
-      </main>
-
-      {/* Footer */}
-      <ContactFooter onPrintClick={() => setPrintModalOpen(true)} />
-
-      {/* Printable / PDF Export Modal */}
-      <PrintResume 
-        isOpen={printModalOpen} 
-        onClose={() => setPrintModalOpen(false)} 
-      />
-    </div>
+      {/* Direct Isolated 1-Page Print Container */}
+      <div id="resume-pdf-document" className="print-only-view">
+        <ResumeDocument />
+      </div>
+    </>
   );
 }
