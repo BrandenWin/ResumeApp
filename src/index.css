@@ -39,44 +39,56 @@
   animation: pulse-slow 8s ease-in-out infinite;
 }
 
-/* Print stylesheet for clean PDF export */
+/* Print stylesheet - 100% isolated 1-Page PDF export matching original layout */
 @media print {
-  body {
-    background-color: #ffffff !important;
+  @page {
+    size: letter portrait;
+    margin: 0.3in 0.45in 0.3in 0.45in;
+  }
+
+  html, body {
+    background: #ffffff !important;
     color: #000000 !important;
+    margin: 0 !important;
+    padding: 0 !important;
+    font-size: 9.5pt !important;
+    line-height: 1.25 !important;
+    -webkit-print-color-adjust: exact !important;
+    print-color-adjust: exact !important;
   }
   
+  /* Hide the rest of the application completely */
+  body * {
+    visibility: hidden !important;
+  }
+
+  /* Make ONLY the printable PDF resume visible */
+  #resume-pdf-document,
+  #resume-pdf-document * {
+    visibility: visible !important;
+  }
+
+  #resume-pdf-document {
+    position: absolute !important;
+    left: 0 !important;
+    top: 0 !important;
+    width: 100% !important;
+    max-width: 100% !important;
+    margin: 0 !important;
+    padding: 0 !important;
+    background: #ffffff !important;
+    color: #000000 !important;
+    box-shadow: none !important;
+    border: none !important;
+    overflow: visible !important;
+  }
+
   .no-print {
     display: none !important;
   }
-  
-  .print-only {
-    display: block !important;
-  }
-
-  .print-page {
-    background: white !important;
-    color: black !important;
-    box-shadow: none !important;
-    padding: 0 !important;
-    margin: 0 !important;
-    max-width: 100% !important;
-  }
 
   a {
-    text-decoration: none !important;
-    color: #000000 !important;
-  }
-
-  /* Prevent page breaks inside cards */
-  .break-inside-avoid {
-    page-break-inside: avoid;
-    break-inside: avoid;
-  }
-}
-
-@media screen {
-  .print-only {
-    display: none !important;
+    text-decoration: underline !important;
+    color: #0033cc !important;
   }
 }
