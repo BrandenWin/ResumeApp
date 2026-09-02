@@ -126,43 +126,19 @@ export const resumeData = {
   ],
   skillCategories: {
     languages: [
-      { name: "Python", level: "Advanced" },
-      { name: "Java", level: "Proficient" },
-      { name: "JavaScript", level: "Advanced" },
-      { name: "SQL", level: "Advanced" },
-      { name: "HTML / CSS", level: "Advanced" },
-      { name: "Bash / Shell", level: "Proficient" },
-      { name: "Dart", level: "Intermediate" }
+      "Python", "Java", "JavaScript", "SQL", "CSS", "HTML", "Linux", "Bash", "Dart"
     ],
     frameworks: [
-      { name: "React", level: "Advanced" },
-      { name: "Node.js", level: "Proficient" },
-      { name: "Vue.js", level: "Intermediate" },
-      { name: "Flutter", level: "Intermediate" },
-      { name: "Tailwind CSS", level: "Advanced" }
+      "React", "Node.js", "Vue", "Flutter", "Tailwind CSS"
     ],
     devopsCloud: [
-      { name: "AWS", level: "Proficient" },
-      { name: "Docker", level: "Advanced" },
-      { name: "Linux / Ubuntu", level: "Advanced" },
-      { name: "Git / GitHub", level: "Advanced" },
-      { name: "SSH", level: "Advanced" }
+      "AWS", "Docker", "Linux", "Ubuntu", "Git/GitHub", "SSH"
     ],
     databasesTools: [
-      { name: "PostgreSQL", level: "Advanced" },
-      { name: "pgAdmin", level: "Advanced" },
-      { name: "MongoDB", level: "Proficient" },
-      { name: "Jira", level: "Proficient" },
-      { name: "Confluence", level: "Proficient" },
-      { name: "ServiceNow", level: "Advanced" }
+      "PostgreSQL", "pgAdmin", "MongoDB", "Jira", "Confluence", "ServiceNow"
     ],
     securityNetworking: [
-      { name: "Wireshark", level: "Proficient" },
-      { name: "Tenable Nessus", level: "Proficient" },
-      { name: "Vulnerability Assessments", level: "Proficient" },
-      { name: "Risk Management", level: "Proficient" },
-      { name: "Cisco Switch CLI", level: "Proficient" },
-      { name: "IPv4 & IPv6 / DHCP / TCP / ARP", level: "Proficient" }
+      "Wireshark", "Tenable Nessus", "Networks", "Vulnerability Assessments", "Risk Management", "Cisco CLI", "IPv4 & IPv6 / DHCP / TCP / ARP"
     ]
   },
   memberships: [

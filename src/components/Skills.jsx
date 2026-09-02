@@ -6,9 +6,7 @@ import {
   Database, 
   Shield, 
   Search, 
-  Layers, 
-  Cpu, 
-  Server
+  Layers
 } from 'lucide-react';
 import { resumeData } from '../data/resumeData';
 
@@ -21,6 +19,7 @@ export default function Skills() {
       icon: Terminal,
       color: "text-amber-400",
       bg: "bg-amber-400/10",
+      borderHover: "hover:border-amber-400/50",
       items: resumeData.skillCategories.languages,
     },
     {
@@ -28,6 +27,7 @@ export default function Skills() {
       icon: Layers,
       color: "text-cyan-400",
       bg: "bg-cyan-400/10",
+      borderHover: "hover:border-cyan-400/50",
       items: resumeData.skillCategories.frameworks,
     },
     {
@@ -35,6 +35,7 @@ export default function Skills() {
       icon: Cloud,
       color: "text-blue-400",
       bg: "bg-blue-400/10",
+      borderHover: "hover:border-blue-400/50",
       items: resumeData.skillCategories.devopsCloud,
     },
     {
@@ -42,6 +43,7 @@ export default function Skills() {
       icon: Database,
       color: "text-emerald-400",
       bg: "bg-emerald-400/10",
+      borderHover: "hover:border-emerald-400/50",
       items: resumeData.skillCategories.databasesTools,
     },
     {
@@ -49,6 +51,7 @@ export default function Skills() {
       icon: Shield,
       color: "text-purple-400",
       bg: "bg-purple-400/10",
+      borderHover: "hover:border-purple-400/50",
       items: resumeData.skillCategories.securityNetworking,
     },
   ];
@@ -84,8 +87,8 @@ export default function Skills() {
         {/* Categories Grid */}
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
           {categories.map((cat, idx) => {
-            const filteredItems = cat.items.filter((item) =>
-              item.name.toLowerCase().includes(searchQuery.toLowerCase())
+            const filteredItems = cat.items.filter((skill) =>
+              skill.toLowerCase().includes(searchQuery.toLowerCase())
             );
 
             if (searchQuery && filteredItems.length === 0) return null;
@@ -95,7 +98,7 @@ export default function Skills() {
             return (
               <div
                 key={idx}
-                className="p-6 rounded-2xl bg-slate-800/50 border border-slate-700/60 hover:border-slate-600 transition-all flex flex-col justify-between"
+                className="p-6 rounded-2xl bg-slate-800/50 border border-slate-700/60 hover:border-slate-600 transition-all flex flex-col justify-between shadow-sm"
               >
                 <div>
                   <div className="flex items-center gap-3 mb-5">
@@ -108,22 +111,19 @@ export default function Skills() {
                   </div>
 
                   <div className="flex flex-wrap gap-2">
-                    {filteredItems.map((item, itemIdx) => (
+                    {filteredItems.map((skill, itemIdx) => (
                       <div
                         key={itemIdx}
-                        className="px-3 py-1.5 rounded-lg bg-slate-900/80 border border-slate-700/60 text-xs font-medium text-slate-200 hover:border-brand-500/60 hover:text-white transition-all flex items-center gap-2 group"
+                        className="px-3.5 py-1.5 rounded-lg bg-slate-900/80 border border-slate-700/60 text-xs sm:text-sm font-medium text-slate-200 hover:border-brand-500 hover:text-white transition-all shadow-inner"
                       >
-                        <span>{item.name}</span>
-                        <span className="text-[10px] font-mono text-slate-400 group-hover:text-brand-300">
-                          {item.level}
-                        </span>
+                        {skill}
                       </div>
                     ))}
                   </div>
                 </div>
 
                 <div className="mt-6 pt-3 border-t border-slate-800 text-[11px] font-mono text-slate-400 flex items-center justify-between">
-                  <span>{filteredItems.length} skills listed</span>
+                  <span>{filteredItems.length} skills</span>
                 </div>
               </div>
             );
