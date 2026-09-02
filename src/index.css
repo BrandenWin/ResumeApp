@@ -46,11 +46,11 @@
   }
 }
 
-/* 100% Isolated Clean 1-Page PDF Print */
+/* 100% Clean 1-Page PDF Print - No browser date/time headers */
 @media print {
   @page {
     size: letter portrait;
-    margin: 0.35in 0.45in 0.35in 0.45in;
+    margin: 0 !important; /* Disables browser URL, date/time, and title headers */
   }
 
   html, body {
@@ -66,7 +66,7 @@
     print-color-adjust: exact !important;
   }
 
-  /* Completely remove the screen application from print layout */
+  /* Remove all screen application elements */
   .screen-only-view,
   .no-print,
   nav,
@@ -76,7 +76,7 @@
     display: none !important;
   }
 
-  /* Render ONLY the single-page document */
+  /* Render ONLY the single-page document with clean paper margins */
   .print-only-view,
   #resume-pdf-document {
     display: block !important;
@@ -84,7 +84,8 @@
     width: 100% !important;
     max-width: 100% !important;
     margin: 0 !important;
-    padding: 0 !important;
+    padding: 0.38in 0.48in 0.38in 0.48in !important;
+    box-sizing: border-box !important;
     background: #ffffff !important;
     color: #000000 !important;
     box-shadow: none !important;
