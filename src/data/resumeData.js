@@ -64,7 +64,7 @@ export const resumeData = {
         "Acquired in-depth working knowledge in network engineering, including IP addressing (IPv4 & IPv6), DHCP, TCP, and ARP protocol operation.",
         "Created packet captures using Wireshark and analyzed switch traffic for network vulnerabilities and anomalies."
       ],
-      skills: ["Cisco CLI", "Wireshark", "Network Security", "IPv4 & IPv6", "DHCP & TCP/ARP", "Packet Capture Analysis", "DoD"]
+      skills: ["Cisco CLI", "Wireshark", "Network Security", "IPv4 & IPv6", "DHCP & TCP/ARP", "Packet Capture Analysis", "U.S Air Force"]
     },
     {
       id: "tenable",
