@@ -27,19 +27,14 @@ export default function Experience() {
     <section id="experience" className="py-20 relative">
       <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Section Title */}
-        <div className="flex flex-col sm:flex-row sm:items-end justify-between mb-10 pb-4 border-b border-slate-800 gap-4">
-          <div>
-            <div className="flex items-center gap-2 text-brand-400 font-mono text-sm font-semibold mb-1">
-              <Briefcase className="w-4 h-4" />
-              <span>Career Trajectory</span>
-            </div>
-            <h2 className="text-3xl sm:text-4xl font-extrabold text-white tracking-tight">
-              Work Experience
-            </h2>
+        <div className="mb-10 pb-4 border-b border-slate-800">
+          <div className="flex items-center gap-2 text-brand-400 font-mono text-sm font-semibold mb-1">
+            <Briefcase className="w-4 h-4" />
+            <span>Career Trajectory</span>
           </div>
-          <p className="text-sm text-slate-400 max-w-md">
-            Proven track record spanning defense contracting, enterprise full-stack development, network engineering, and technical leadership.
-          </p>
+          <h2 className="text-3xl sm:text-4xl font-extrabold text-white tracking-tight">
+            Work Experience
+          </h2>
         </div>
 
         {/* Skill Filter Bar */}
