@@ -1,4 +1,5 @@
 import React from 'react';
+import towsonTigerImg from '../assets/towson-tiger.png';
 
 export function TurtleIcon({ className = "w-6 h-6" }) {
   return (
@@ -37,69 +38,13 @@ export function TurtleIcon({ className = "w-6 h-6" }) {
   );
 }
 
-export function TigerGolfIcon({ className = "w-6 h-6" }) {
+export function TowsonTigerIcon({ className = "w-4 h-4" }) {
   return (
-    <svg 
-      className={className} 
-      viewBox="0 0 24 24" 
-      fill="none" 
-      xmlns="http://www.w3.org/2000/svg"
-    >
-      {/* Crossed Golf Club (Behind) */}
-      <line x1="4" y1="20" x2="19" y2="4" stroke="#cbd5e1" strokeWidth="1.8" strokeLinecap="round" />
-      <line x1="4" y1="20" x2="6.5" y2="17.5" stroke="#1e293b" strokeWidth="2.5" strokeLinecap="round" />
-      <path d="M18.5 3.5L21.5 5.5L20 8.5L17.5 7L18.5 3.5Z" fill="#94a3b8" stroke="#64748b" strokeWidth="0.8" />
-
-      {/* Tiger Ears */}
-      <circle cx="6.5" cy="7.5" r="3" fill="#f59e0b" stroke="#d97706" strokeWidth="0.6" />
-      <circle cx="6.5" cy="7.5" r="1.6" fill="#1e293b" />
-      <circle cx="17.5" cy="7.5" r="3" fill="#f59e0b" stroke="#d97706" strokeWidth="0.6" />
-      <circle cx="17.5" cy="7.5" r="1.6" fill="#1e293b" />
-
-      {/* Tiger Head Base (Yellow/Gold) */}
-      <path 
-        d="M5 11C5 7.5 8 5.5 12 5.5C16 5.5 19 7.5 19 11C19 15.5 16 18.5 12 18.5C8 18.5 5 15.5 5 11Z" 
-        fill="#fbbf24" 
-        stroke="#d97706" 
-        strokeWidth="1" 
-      />
-
-      {/* Tiger Forehead & Side Stripes (Black/Navy) */}
-      <path d="M12 5.8V8.2" stroke="#1e293b" strokeWidth="1.4" strokeLinecap="round" />
-      <path d="M10 6.6L11 8.2" stroke="#1e293b" strokeWidth="1.2" strokeLinecap="round" />
-      <path d="M14 6.6L13 8.2" stroke="#1e293b" strokeWidth="1.2" strokeLinecap="round" />
-      
-      {/* Cheek Stripes */}
-      <path d="M5.6 11.5L7.8 12" stroke="#1e293b" strokeWidth="1.2" strokeLinecap="round" />
-      <path d="M5.8 13.5L7.5 13.7" stroke="#1e293b" strokeWidth="1.2" strokeLinecap="round" />
-      <path d="M18.4 11.5L16.2 12" stroke="#1e293b" strokeWidth="1.2" strokeLinecap="round" />
-      <path d="M18.2 13.5L16.5 13.7" stroke="#1e293b" strokeWidth="1.2" strokeLinecap="round" />
-
-      {/* Eyes */}
-      <ellipse cx="9" cy="11" rx="1.2" ry="1.4" fill="#1e293b" />
-      <ellipse cx="15" cy="11" rx="1.2" ry="1.4" fill="#1e293b" />
-      <circle cx="8.6" cy="10.6" r="0.4" fill="#ffffff" />
-      <circle cx="14.6" cy="10.6" r="0.4" fill="#ffffff" />
-
-      {/* Muzzle (White/Cream) */}
-      <ellipse cx="12" cy="14.5" rx="3.4" ry="2.3" fill="#fef3c7" />
-
-      {/* Nose (Black) & Mouth */}
-      <path d="M11 13.6H13L12 14.8Z" fill="#1e293b" />
-      <path d="M12 14.8V15.8M10.8 15.6C11.2 16.2 12 16.2 12 16.2C12 16.2 12.8 16.2 13.2 15.6" stroke="#1e293b" strokeWidth="0.8" strokeLinecap="round" />
-      
-      {/* Whiskers */}
-      <circle cx="10" cy="14.5" r="0.35" fill="#1e293b" />
-      <circle cx="10.6" cy="15.1" r="0.35" fill="#1e293b" />
-      <circle cx="14" cy="14.5" r="0.35" fill="#1e293b" />
-      <circle cx="13.4" cy="15.1" r="0.35" fill="#1e293b" />
-
-      {/* Golf Ball (Foreground accent) */}
-      <circle cx="19.5" cy="19.5" r="2" fill="#ffffff" stroke="#94a3b8" strokeWidth="0.6" />
-      <circle cx="19" cy="19" r="0.25" fill="#cbd5e1" />
-      <circle cx="20" cy="19" r="0.25" fill="#cbd5e1" />
-      <circle cx="19.5" cy="20" r="0.25" fill="#cbd5e1" />
-    </svg>
+    <img 
+      src={towsonTigerImg} 
+      alt="Towson Tiger" 
+      className={`${className} object-contain inline-block drop-shadow-sm`} 
+    />
   );
 }
 

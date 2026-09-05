@@ -1,7 +1,7 @@
 import React from 'react';
 import { Calendar, Award, Target, Users } from 'lucide-react';
-import { TigerGolfIcon } from './Icons';
 import { resumeData } from '../data/resumeData';
+import towsonTigerImg from '../assets/towson-tiger.png';
 
 export default function Affiliations() {
   return (
@@ -10,7 +10,7 @@ export default function Affiliations() {
         {/* Section Header */}
         <div className="mb-10 pb-4 border-b border-slate-800">
           <div className="flex items-center gap-2 text-amber-400 font-mono text-sm font-semibold mb-1">
-            <TigerGolfIcon className="w-5 h-5" />
+            <img src={towsonTigerImg} alt="Towson Tiger" className="w-5 h-5 object-contain" />
             <span>Athletic & Collegiate Leadership</span>
           </div>
           <h2 className="text-3xl sm:text-4xl font-extrabold text-white tracking-tight">
@@ -23,22 +23,32 @@ export default function Affiliations() {
             key={idx}
             className="relative p-6 sm:p-8 rounded-2xl bg-gradient-to-br from-slate-800/80 via-slate-800/50 to-slate-900/80 border border-amber-500/30 shadow-xl overflow-hidden group hover:border-amber-500/50 transition-all"
           >
-            {/* Ambient decorative tiger badge */}
-            <div className="absolute top-0 right-0 p-6 opacity-10 pointer-events-none group-hover:opacity-15 transition-opacity">
-              <TigerGolfIcon className="w-64 h-64" />
+            {/* Ambient decorative official Towson tiger badge */}
+            <div className="absolute -top-6 -right-6 p-6 opacity-15 pointer-events-none group-hover:opacity-25 transition-opacity">
+              <img 
+                src={towsonTigerImg} 
+                alt="Towson Tiger Watermark" 
+                className="w-72 h-72 object-contain select-none filter contrast-125" 
+              />
             </div>
 
             <div className="relative z-10 flex flex-col md:flex-row md:items-start justify-between gap-4 mb-4">
               <div className="flex items-center gap-4">
-                <div className="w-14 h-14 rounded-2xl bg-gradient-to-tr from-amber-500/20 to-yellow-500/10 border border-amber-500/30 flex items-center justify-center text-amber-400 shrink-0 shadow-md group-hover:scale-105 transition-transform">
-                  <TigerGolfIcon className="w-9 h-9" />
+                <div className="w-16 h-16 rounded-2xl bg-gradient-to-tr from-amber-500/20 via-yellow-500/10 to-slate-800 border border-amber-500/40 flex items-center justify-center p-2 shrink-0 shadow-lg shadow-amber-500/5 group-hover:scale-105 group-hover:border-amber-400 transition-all">
+                  <img 
+                    src={towsonTigerImg} 
+                    alt="Towson Tigers Logo" 
+                    className="w-full h-full object-contain drop-shadow"
+                  />
                 </div>
                 <div>
                   <h3 className="text-xl sm:text-2xl font-bold text-white group-hover:text-amber-300 transition-colors">
                     {item.title}
                   </h3>
-                  <div className="text-amber-400 font-semibold text-sm">
-                    {item.organization}
+                  <div className="text-amber-400 font-semibold text-sm flex items-center gap-1.5">
+                    <span>{item.organization}</span>
+                    <span className="text-slate-500">•</span>
+                    <span className="text-slate-300 text-xs font-mono">Division I</span>
                   </div>
                 </div>
               </div>
