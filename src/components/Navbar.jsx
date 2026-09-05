@@ -11,6 +11,7 @@ import {
   Mail,
   Printer
 } from 'lucide-react';
+import { TurtleIcon } from './Icons';
 import { resumeData } from '../data/resumeData';
 
 export default function Navbar({ onPrintClick }) {
@@ -45,8 +46,8 @@ export default function Navbar({ onPrintClick }) {
       <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 flex items-center justify-between">
         {/* Brand / Name */}
         <a href="#about" className="flex items-center gap-3 group">
-          <div className="w-10 h-10 rounded-xl bg-gradient-to-tr from-brand-600 to-cyan-500 flex items-center justify-center text-white font-bold text-lg shadow-md group-hover:scale-105 transition-transform">
-            BN
+          <div className="w-10 h-10 rounded-xl bg-gradient-to-tr from-emerald-600/30 to-teal-500/20 border border-emerald-500/40 flex items-center justify-center shadow-md group-hover:scale-105 transition-transform group-hover:border-emerald-400">
+            <TurtleIcon className="w-7 h-7" />
           </div>
           <div>
             <div className="font-bold text-slate-100 group-hover:text-brand-400 transition-colors tracking-tight flex items-center gap-2">
