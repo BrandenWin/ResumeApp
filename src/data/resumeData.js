@@ -35,7 +35,7 @@ export const resumeData = {
       skills: ["Python", "PostgreSQL", "Docker", "API Design", "Unit Testing", "SQL", "pgAdmin", "U.S. Air Force"]
     },
     {
-      id: "Digiclarity",
+      id: "digiclarity",
       role: "Software Developer Intern",
       company: "Digiclarity",
       location: "Dallas, TX",
