@@ -11,7 +11,7 @@ import {
   Mail,
   Printer
 } from 'lucide-react';
-import { TurtleIcon } from './Icons';
+import { TurtleIcon, TigerGolfIcon } from './Icons';
 import { resumeData } from '../data/resumeData';
 
 export default function Navbar({ onPrintClick }) {
@@ -31,7 +31,7 @@ export default function Navbar({ onPrintClick }) {
     { name: 'Experience', href: '#experience', icon: Briefcase },
     { name: 'Skills', href: '#skills', icon: Code2 },
     { name: 'Education', href: '#education', icon: GraduationCap },
-    { name: 'Athletics', href: '#affiliations', icon: Trophy },
+    { name: 'Athletics', href: '#affiliations', icon: TigerGolfIcon },
     { name: 'Contact', href: '#contact', icon: Mail },
   ];
 

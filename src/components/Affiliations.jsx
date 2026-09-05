@@ -1,5 +1,6 @@
 import React from 'react';
-import { Trophy, Calendar, Award, Target, Users } from 'lucide-react';
+import { Calendar, Award, Target, Users } from 'lucide-react';
+import { TigerGolfIcon } from './Icons';
 import { resumeData } from '../data/resumeData';
 
 export default function Affiliations() {
@@ -8,8 +9,8 @@ export default function Affiliations() {
       <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Section Header */}
         <div className="mb-10 pb-4 border-b border-slate-800">
-          <div className="flex items-center gap-2 text-brand-400 font-mono text-sm font-semibold mb-1">
-            <Trophy className="w-4 h-4" />
+          <div className="flex items-center gap-2 text-amber-400 font-mono text-sm font-semibold mb-1">
+            <TigerGolfIcon className="w-5 h-5" />
             <span>Athletic & Collegiate Leadership</span>
           </div>
           <h2 className="text-3xl sm:text-4xl font-extrabold text-white tracking-tight">
@@ -20,20 +21,20 @@ export default function Affiliations() {
         {resumeData.memberships.map((item, idx) => (
           <div
             key={idx}
-            className="relative p-6 sm:p-8 rounded-2xl bg-gradient-to-br from-slate-800/80 via-slate-800/50 to-slate-900/80 border border-slate-700/60 shadow-xl overflow-hidden"
+            className="relative p-6 sm:p-8 rounded-2xl bg-gradient-to-br from-slate-800/80 via-slate-800/50 to-slate-900/80 border border-amber-500/30 shadow-xl overflow-hidden group hover:border-amber-500/50 transition-all"
           >
-            {/* Ambient decorative badge */}
-            <div className="absolute top-0 right-0 p-8 opacity-5 pointer-events-none">
-              <Trophy className="w-64 h-64 text-white" />
+            {/* Ambient decorative tiger badge */}
+            <div className="absolute top-0 right-0 p-6 opacity-10 pointer-events-none group-hover:opacity-15 transition-opacity">
+              <TigerGolfIcon className="w-64 h-64" />
             </div>
 
             <div className="relative z-10 flex flex-col md:flex-row md:items-start justify-between gap-4 mb-4">
-              <div className="flex items-center gap-3">
-                <div className="w-12 h-12 rounded-xl bg-amber-500/10 border border-amber-500/20 flex items-center justify-center text-amber-400 shrink-0">
-                  <Trophy className="w-6 h-6" />
+              <div className="flex items-center gap-4">
+                <div className="w-14 h-14 rounded-2xl bg-gradient-to-tr from-amber-500/20 to-yellow-500/10 border border-amber-500/30 flex items-center justify-center text-amber-400 shrink-0 shadow-md group-hover:scale-105 transition-transform">
+                  <TigerGolfIcon className="w-9 h-9" />
                 </div>
                 <div>
-                  <h3 className="text-xl sm:text-2xl font-bold text-white">
+                  <h3 className="text-xl sm:text-2xl font-bold text-white group-hover:text-amber-300 transition-colors">
                     {item.title}
                   </h3>
                   <div className="text-amber-400 font-semibold text-sm">
@@ -43,20 +44,20 @@ export default function Affiliations() {
               </div>
 
               <div className="flex items-center gap-1.5 text-xs font-mono px-3 py-1.5 rounded-lg bg-slate-900/80 border border-slate-800 text-slate-300 self-start">
-                <Calendar className="w-3.5 h-3.5 text-brand-400" />
+                <Calendar className="w-3.5 h-3.5 text-amber-400" />
                 <span>{item.period}</span>
               </div>
             </div>
 
-            <p className="text-slate-300 text-sm sm:text-base leading-relaxed max-w-4xl mb-6">
+            <p className="text-slate-300 text-sm sm:text-base leading-relaxed max-w-4xl mb-6 relative z-10">
               {item.description}
             </p>
 
             {/* Value cards derived from athletic commitment */}
-            <div className="grid sm:grid-cols-3 gap-4 pt-4 border-t border-slate-700/50">
+            <div className="grid sm:grid-cols-3 gap-4 pt-4 border-t border-slate-700/50 relative z-10">
               <div className="p-3.5 rounded-xl bg-slate-900/60 border border-slate-800">
                 <div className="flex items-center gap-2 text-white font-semibold text-xs sm:text-sm mb-1">
-                  <Target className="w-4 h-4 text-brand-400" />
+                  <Target className="w-4 h-4 text-amber-400" />
                   <span>High-Pressure Focus</span>
                 </div>
                 <p className="text-xs text-slate-400">
