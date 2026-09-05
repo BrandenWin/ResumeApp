@@ -1,13 +1,13 @@
 import React, { useState, useEffect } from 'react';
-import { 
-  ShieldCheck, 
-  FileDown, 
-  Menu, 
-  X, 
-  Briefcase, 
-  GraduationCap, 
-  Code2, 
-  Trophy, 
+import {
+  ShieldCheck,
+  FileDown,
+  Menu,
+  X,
+  Briefcase,
+  GraduationCap,
+  Code2,
+  Trophy,
   Mail,
   Printer
 } from 'lucide-react';
@@ -27,7 +27,7 @@ export default function Navbar({ onPrintClick }) {
   }, []);
 
   const navLinks = [
-    { name: 'About', href: '#about', icon: ShieldCheck },
+    { name: 'LIES', href: '#about', icon: ShieldCheck },
     { name: 'Experience', href: '#experience', icon: Briefcase },
     { name: 'Skills', href: '#skills', icon: Code2 },
     { name: 'Education', href: '#education', icon: GraduationCap },
@@ -36,12 +36,11 @@ export default function Navbar({ onPrintClick }) {
   ];
 
   return (
-    <header 
-      className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
-        scrolled 
-          ? 'bg-slate-900/90 backdrop-blur-md border-b border-slate-800 shadow-lg shadow-black/20 py-3' 
+    <header
+      className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${scrolled
+          ? 'bg-slate-900/90 backdrop-blur-md border-b border-slate-800 shadow-lg shadow-black/20 py-3'
           : 'bg-transparent py-5'
-      }`}
+        }`}
     >
       <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 flex items-center justify-between">
         {/* Brand / Name */}
